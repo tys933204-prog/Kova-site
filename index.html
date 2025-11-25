@@ -88,19 +88,18 @@
         using your actual inventory — instantly.
     </p>
 
-    <!-- Show form -->
     <button class="btn" onclick="document.getElementById('demoForm').style.display='block';">
         Request Demo
     </button>
 
-    <!-- AJAX submission form -->
     <div id="demoForm" style="display:none; margin-top:30px;">
         <form action="https://formsubmit.co/ajax/tysmith0550@outlook.com" method="POST">
 
-            <!-- Required for redirect -->
+            <!-- Hidden config -->
             <input type="hidden" name="_redirect" value="true">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Boutique Demo Request">
             <input type="hidden" name="_next" value="https://tys933204-prog.github.io/Kova-site/thankyou.html">
 
             <label>Boutique Name:</label><br>
