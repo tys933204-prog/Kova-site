@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You — Kova</title>
+    <title>Kova — AI Stylist for Boutiques</title>
 
     <style>
         body {
             margin: 0;
             padding: 0;
+            font-family: 'Inter', sans-serif;
             background: #0b0b0b;
             color: white;
-            font-family: 'Inter', sans-serif;
             text-align: center;
         }
 
         h1 {
-            font-size: 2.2rem;
-            margin-top: 90px;
+            font-size: 2.5rem;
             font-family: 'Poppins', sans-serif;
+            margin-top: 80px;
         }
 
         h1 span {
@@ -26,32 +26,101 @@
         }
 
         p {
+            font-size: 1.1rem;
             max-width: 500px;
             margin: 20px auto;
-            font-size: 1.1rem;
             color: #cfcfcf;
         }
 
+        .btn {
+            margin-top: 25px;
+            display: inline-block;
+            background-color: #00ff8a;
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #00c96c;
+        }
+
+        input, select {
+            padding: 12px;
+            width: 80%;
+            max-width: 300px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        label {
+            color: #cfcfcf;
+            font-size: 1rem;
+        }
+
         footer {
-            margin-top: 70px;
-            color: #777;
+            margin-top: 80px;
             font-size: 0.9rem;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            p { font-size: 1rem; padding: 0 20px; }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Thank you from <span>KOVA</span></h1>
+    <h1>KOVA <span>AI</span></h1>
 
     <p>
-        Your request was received successfully.  
-        I’ll reach out soon with your demo and next steps.
+        The AI stylist built for boutiques.<br>
+        Helps shoppers choose the right size, style, and outfit<br>
+        using your actual inventory — instantly.
     </p>
 
-    <p>
-        If you need anything sooner, feel free to reach out anytime.
-    </p>
+    <!-- Button -->
+    <button class="btn" onclick="document.getElementById('demoForm').style.display='block';">
+        Request Demo
+    </button>
+
+    <!-- Form -->
+    <div id="demoForm" style="display:none; margin-top:30px;">
+        <form action="https://formsubmit.co/tysmith0550@outlook.com" method="POST">
+
+            <!-- Redirect after submit -->
+            <input type="hidden" name="_next" value="https://tys933204.github.io/Kova-site/thankyou.html">
+
+            <!-- Anti-spam -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <label>Boutique Name:</label><br>
+            <input type="text" name="Boutique Name" required><br>
+
+            <label>How do you want the demo?</label><br>
+            <select name="Demo Type" required>
+                <option>Quick video</option>
+                <option>Live walkthrough</option>
+                <option>Not sure yet</option>
+            </select><br>
+
+            <label>Where should I send it? (Email or Messenger link)</label><br>
+            <input type="text" name="Contact Method" required><br>
+
+            <button type="submit" class="btn">
+                Submit (takes 5 seconds)
+            </button>
+        </form>
+    </div>
 
     <footer>
         © 2025 Kova — Built by Ty Smith  
