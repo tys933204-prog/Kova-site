@@ -22,7 +22,7 @@
         }
 
         h1 span {
-            color: #00ff8a; /* neon green accent */
+            color: #00ff8a;
         }
 
         p {
@@ -76,7 +76,6 @@
             p { font-size: 1rem; padding: 0 20px; }
         }
     </style>
-
 </head>
 
 <body>
@@ -85,28 +84,35 @@
 
     <p>
         The AI stylist built for boutiques.  
-        Kova helps shoppers choose the right size, style, and outfit  
+        Helps shoppers choose the right size, style, and outfit  
         using your actual inventory — instantly.
     </p>
 
-    <!-- Button that reveals the form -->
     <button class="btn" onclick="document.getElementById('demoForm').style.display='block';">
         Request Demo
     </button>
 
-    <!-- Hidden form -->
     <div id="demoForm" style="display:none; margin-top:30px;">
-        <form action="mailto:YOUR_EMAIL_HERE" method="POST" enctype="text/plain">
-            
+        <form action="https://formsubmit.co/tysmith0550@outlook.com" method="POST">
+
+            <!-- Redirect after submit -->
+            <input type="hidden" name="_next" value="https://yourusername.github.io/Kova-site/thankyou.html">
+
+            <!-- Anti-spam -->
+            <input type="hidden" name="_captcha" value="false">
+
             <label>Boutique Name:</label><br>
             <input type="text" name="Boutique Name" required><br>
 
             <label>How do you want the demo?</label><br>
-            <select name="Demo Type">
+            <select name="Demo Type" required>
                 <option>Quick video</option>
                 <option>Live walkthrough</option>
                 <option>Not sure yet</option>
             </select><br>
+
+            <label>Where should I send it? (Email or Messenger link)</label><br>
+            <input type="text" name="Contact Method" required><br>
 
             <button type="submit" class="btn">
                 Submit (takes 5 seconds)
@@ -115,7 +121,9 @@
     </div>
 
     <footer>
-        © 2025 Kova — Built by Ty
+        © 2025 Kova — Built by Ty Smith  
+        <br>
+        📩 tysmith0550@outlook.com
     </footer>
 
 </body>
